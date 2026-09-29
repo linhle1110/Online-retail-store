@@ -112,3 +112,10 @@ Techniques: ranking windows with rank() over, conditional aggregration
 
 - How many new customers are acquired each month, based on their first invoice date? What share of customers who first purchased in a given month placed a second order within 90 days? 
 
+Techniques: subqueries, window 
+
+| month      | new_customers | next_purchase_within_90_days | pct_reordered_within_90 |
+| ---------- | ------------- | ---------------------------- | ----------------------- |
+| 2009-12-01 | 955           | 570                          | 59.00                   |
+| 2010-01-01 | 383           | 196                          | 51.00                   |
+| 2010-02-01 | 374           | 181                          | 48.00                   |
