@@ -74,4 +74,12 @@ The raw data was cleaned into a separate view, leaving the original table unchan
 
 Missing customer ID and product description were not deleted. They represent real sales, so removing them could understate revenue. They would be excluded where a customer identity is needed, such as RFM and customer segmentation. 
 
+## 4. Data analysis
+
+### 4.1. Growth & revenue
+
+- How has monthly revenue trended over the two years, and which months show clear seasonality? 
+
+
+
 
