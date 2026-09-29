@@ -76,7 +76,7 @@ Missing customer ID and product description were not deleted. They represent rea
 
 ## 4. Data analysis
 
-### 4.1. Growth & revenue
+### 4.1. Growth & revenue: analysis/01_growth & revenue 
 
 - How has monthly revenue trended over the two years, and which months show clear seasonality? 
 
