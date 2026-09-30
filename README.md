@@ -78,7 +78,7 @@ Missing customer ID and product description were not deleted. They represent rea
 ### 4.1. Growth & revenue: 
 - How has monthly revenue trended over the two years, and which months show clear seasonality?
 
-['analysis/01_growth_and_revenue/Revenue_trend_over_time.sql'](analysis/01_growth_and_revenue/Revenue_trend_over_time.sql)
+['analysis/01_growth_and_revenue/revenue_trend_over_time.sql'](analysis/01_growth_and_revenue/revenue_trend_over_time.sql)
 
 Techniques: Date handling with DATE_TRUNC(), comparison window with LAG(), conditional aggregration 
   
