@@ -1,5 +1,5 @@
--- New customer per month
--- Business question: How many new customers are acquired each month, based on their first invoice date? 
+-- New customer per month; next purchase within 90 days
+-- Business question: How many new customers are acquired each month, based on their first invoice date? What share of customers who first purchased in a given month placed a second order within 90 days?
 
 with first_purchase as (
   select distinct "Customer ID", "InvoiceDate"::date as purchase_date
