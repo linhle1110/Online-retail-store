@@ -141,3 +141,25 @@ Techniques: CTEs, window functions (NTILE) and rule-based classification
 | 17592.0     | 739     | 1         | 148.30   | 1       | 1       | 1       | one time buyer |
 | 13526.0     | 739     | 2         | 1182.00  | 1       | 3       | 3       | at risk        |
 | 17056.0     | 739     | 1         | 128.60   | 1       | 1       | 1       | one time buyer |
+
+### 4.4. Operations
+
+- What proportion of invoices are cancellations, and does that rate vary by country or month?
+
+Techniques: Conditional aggregation, date handling with DATE_TRUNC(), 
+
+| total_invoices | cancelled_invoices | cancel_rate_pct |
+| -------------- | ------------------ | --------------- |
+| 53628          | 8292               | 15.46           |
+
+| Country         | total_invoices | cancelled_invoices | cancel_rate_pct |
+| --------------- | -------------- | ------------------ | --------------- |
+| Japan           | 56             | 23                 | 41.07           |
+| Channel Islands | 79             | 24                 | 30.38           |
+| Italy           | 92             | 27                 | 29.35           |
+
+| month      | total_invoices | cancelled_invoices | cancel_rate_pct |
+| ---------- | -------------- | ------------------ | --------------- |
+| 2009-12-01 | 2330           | 401                | 17.21           |
+| 2010-01-01 | 1633           | 300                | 18.37           |
+| 2010-02-01 | 1969           | 240                | 12.19           |
