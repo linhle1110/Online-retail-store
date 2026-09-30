@@ -80,7 +80,7 @@ Missing customer ID and product description were not deleted. They represent rea
 
 ['analysis/01_growth_and_revenue/Revenue_trend_over_time.sql'](analysis/01_growth_and_revenue/Revenue_trend_over_time.sql)
 
-Techniques: date handling with DATE_TRUNC(), comparison window with LAG(), conditional aggregration 
+Techniques: Date handling with DATE_TRUNC(), comparison window with LAG(), conditional aggregration 
   
 | Month | This_month_revenue | Prev_month_revenue | Percentage_change |
 |---|---|---|---|
@@ -90,7 +90,7 @@ Techniques: date handling with DATE_TRUNC(), comparison window with LAG(), condi
 
 - Which countries generate the most revenue, and how concentrated is it in the UK vs. international markets?
 
-Techniques: conditional aggregation
+Techniques: Conditional aggregation
 
 | Country        | total_revenue | pct_of_total |
 | -------------- | ------------- | ------------ |
@@ -100,7 +100,7 @@ Techniques: conditional aggregation
 
 - Which products drive the largest share of revenue, and how much comes from just the top 20? 
 
-Techniques: ranking windows with rank() over, conditional aggregration
+Techniques: Ranking windows with rank() over, conditional aggregration
 
 | revenue_rank | StockCode | Description                         | total_revenue | pct_of_total_revenue |
 | ------------ | --------- | ----------------------------------- | ------------- | -------------------- |
@@ -112,10 +112,32 @@ Techniques: ranking windows with rank() over, conditional aggregration
 
 - How many new customers are acquired each month, based on their first invoice date? What share of customers who first purchased in a given month placed a second order within 90 days? 
 
-Techniques: subqueries, window 
+Techniques: Subqueries, ranking windows with rank() over, date handling with DATE_TRUNC(), conditional aggregation
 
 | month      | new_customers | next_purchase_within_90_days | pct_reordered_within_90 |
 | ---------- | ------------- | ---------------------------- | ----------------------- |
 | 2009-12-01 | 955           | 570                          | 59.00                   |
 | 2010-01-01 | 383           | 196                          | 51.00                   |
 | 2010-02-01 | 374           | 181                          | 48.00                   |
+
+- Which customers haven't ordered in the last 6 months and would count as churned?
+
+Techniques: Conditional logic, subqueries, conditional aggregation 
+
+| Customer ID | last_order_date | days_since_last_order | churn_status |
+| ----------- | --------------- | --------------------- | ------------ |
+| 14920.0     | 2011-05-11      | 212                   | Churned      |
+| 13192.0     | 2011-09-05      | 95                    | Active       |
+| 16165.0     | 2010-07-22      | 505                   | Churned      |
+
+### 4.3. Segmentation 
+
+- Based on Recency, Frequency, and Monetary value, which customers are "loyal," "at-risk," or "one-time buyers"? 
+
+Techniques: CTEs, window functions (NTILE) and rule-based classification
+
+| Customer ID | recency | frequency | monetary | r_score | f_score | m_score | segment        |
+| ----------- | ------- | --------- | -------- | ------- | ------- | ------- | -------------- |
+| 17592.0     | 739     | 1         | 148.30   | 1       | 1       | 1       | one time buyer |
+| 13526.0     | 739     | 2         | 1182.00  | 1       | 3       | 3       | at risk        |
+| 17056.0     | 739     | 1         | 128.60   | 1       | 1       | 1       | one time buyer |
