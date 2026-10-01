@@ -102,6 +102,8 @@ Techniques: Conditional aggregation
 
 - Which products drive the largest share of revenue, and how much comes from just the top 20? 
 
+['analysis/01_growth_and_revenue/top_ranking_products.sql'](analysis/01_growth_and_revenue/top_ranking_products.sql)
+
 Techniques: Ranking windows with rank() over, conditional aggregration
 
 | revenue_rank | StockCode | Description                         | total_revenue | pct_of_total_revenue |
