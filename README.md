@@ -90,6 +90,8 @@ Techniques: Date handling with DATE_TRUNC(), comparison window with LAG(), condi
 
 - Which countries generate the most revenue, and how concentrated is it in the UK vs. international markets?
 
+['analysis/01_growth_and_revenue/revenue_trend_over_time.sql'](analysis/01_growth_and_revenue/revenue_trend_over_time.sql)
+
 Techniques: Conditional aggregation
 
 | Country        | total_revenue | pct_of_total |
