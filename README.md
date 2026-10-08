@@ -116,6 +116,8 @@ Techniques: Ranking windows with rank() over, conditional aggregration
 
 - How many new customers are acquired each month, based on their first invoice date? What share of customers who first purchased in a given month placed a second order within 90 days? 
 
+['analysis/02_acquisition/new_customers_per_month.sql'](analysis/02_acquisition/new_customers_per_month.sql)
+
 Techniques: Subqueries, ranking windows with rank() over, date handling with DATE_TRUNC(), conditional aggregation
 
 | month      | new_customers | next_purchase_within_90_days | pct_reordered_within_90 |
@@ -125,6 +127,8 @@ Techniques: Subqueries, ranking windows with rank() over, date handling with DAT
 | 2010-02-01 | 374           | 181                          | 48.00                   |
 
 - Which customers haven't ordered in the last 6 months and would count as churned?
+
+['analysis/02_acquisition/customer_categorisation.sql'](analysis/02_acquisition/customer_categorisation.sql)
 
 Techniques: Conditional logic, subqueries, conditional aggregation 
 
@@ -138,6 +142,8 @@ Techniques: Conditional logic, subqueries, conditional aggregation
 
 - Based on Recency, Frequency, and Monetary value, which customers are "loyal," "at-risk," or "one-time buyers"? 
 
+['analysis/03_segmentation/customer_segmentation.sql'](analysis/03_segmentation/customer_segmentation.sql)
+
 Techniques: CTEs, window functions (NTILE) and rule-based classification
 
 | Customer ID | recency | frequency | monetary | r_score | f_score | m_score | segment        |
@@ -149,6 +155,8 @@ Techniques: CTEs, window functions (NTILE) and rule-based classification
 ### 4.4. Operations
 
 - What proportion of invoices are cancellations, and does that rate vary by country or month?
+
+['analysis/04_operation/cancellation.sql'](analysis/04_operation/cancellation.sql)
 
 Techniques: Conditional aggregation, date handling with DATE_TRUNC(), 
 
