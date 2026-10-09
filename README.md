@@ -90,7 +90,7 @@ Techniques: Date handling with DATE_TRUNC(), comparison window with LAG(), condi
 
 - Which countries generate the most revenue, and how concentrated is it in the UK vs. international markets?
 
-['analysis/01_growth_and_revenue/revenue_trend_over_time.sql'](analysis/01_growth_and_revenue/revenue_trend_over_time.sql)
+['analysis/01_growth_and_revenue/revenue_per_country.sql'](analysis/01_growth_and_revenue/revenue_per_country.sql)
 
 Techniques: Conditional aggregation
 
@@ -175,3 +175,24 @@ Techniques: Conditional aggregation, date handling with DATE_TRUNC(),
 | 2009-12-01 | 2330           | 401                | 17.21           |
 | 2010-01-01 | 1633           | 300                | 18.37           |
 | 2010-02-01 | 1969           | 240                | 12.19           |
+
+## 5. Repository structure
+
+```text
+Online-retail-store/
+├── README.md                              
+├── data/                  
+└── analysis/
+    ├── 00_data_preparation/              
+    ├── 01_growth_and_revenue/
+    │   ├── revenue_by_country.sql
+    │   ├── revenue_trend_over_time.sql
+    │   └── top_ranking_products.sql
+    ├── 02_acquisition/
+    │   ├── new_customers_per_month.sql
+    │   └── customer_categorisation.sql
+    ├── 03_segmentation/
+    │   └── customer_segmentation.sql
+    └── 04_operation/
+        └── cancellation.sql
+```
