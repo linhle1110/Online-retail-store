@@ -63,7 +63,7 @@ The dataset is loaded into Supabase (PostgreSQL) for analysis.
 
 ## 3. Data preparation 
 
-The raw data was cleaned into a separate view, leaving the original table unchanged. All cleaning queries are in...
+The raw data was cleaned into a separate view, leaving the original table unchanged. All cleaning queries are in ['analysis/00_data_preparation'](analysis/00_data_preparation)
 
 | Step | Issue Identified | Action Taken | 
 |---|---|---|
