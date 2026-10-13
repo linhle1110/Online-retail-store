@@ -71,7 +71,7 @@ The raw data was cleaned into a separate view, leaving the original table unchan
 | 2 | Duplicate rows | Created table with distinct values | 
 | 3 | Cancelled invoices (prefix "C"), quantity and price < 0 |  Created view excluding these values for revenue calculation | 
 
-Missing customer ID and product description were not deleted. They represent real sales, so removing them could understate revenue. They would be excluded where a customer identity is needed, such as RFM and customer segmentation. 
+Missing customer ID and product description were not deleted. They might represent real sales, so removing them could understate revenue. They would be excluded where a customer identity is needed, such as RFM and customer segmentation. 
 
 ## 4. Data analysis
 
